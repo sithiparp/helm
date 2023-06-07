@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  namespace: default
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app.kubernetes.io/name: nginx
+    app.kubernetes.io/name: {{ .Release.Name }}
 spec:
   selector:
     matchLabels:
       app: nginx
+      app.kubernetes.io/name: {{ .Release.Name }}
   replicas: {{ .Values.nginx.replicas }}
   template:
     metadata:
       labels:
         app: nginx
+        app.kubernetes.io/name: {{ .Release.Name }}
     spec:
       containers:
       - name: nginx
