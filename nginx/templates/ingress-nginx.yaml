@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: {{ .Release.Name }}
 spec:
-  ingressClassName: {{ .Release.Name }}
+  ingressClassName: {{ .Values.nginx.ingress.ingressClassName }}
   rules:
   - host: {{ .Values.nginx.host }}
     http:

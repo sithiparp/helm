@@ -3,5 +3,7 @@ nginx:
   image: nginx:1.25.0
   replicas: 2
   host: nginx.arpo.website
+  ingress:
+    ingressClassName: nginx
   service:
     type: ClusterIP
