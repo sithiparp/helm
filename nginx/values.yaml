@@ -1,6 +1,6 @@
 nginx:
   namespace: default
-  image: nginx:1.25.0
+  image: nginx:1.24.0
   replicas: 1
   host: nginx-test.arpo.website
   ingress:
