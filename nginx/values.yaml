@@ -1,4 +1,4 @@
 nginx:
   namespace: default
   image: nginx:1.25.0
-  replicas: 3
+  replicas: 1
