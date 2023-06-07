@@ -1,3 +1,4 @@
+# helm upgrade --install nginx-test -f values.yaml .
 apiVersion: v1
 description: Nginx Helm Chart
 name: Nginx

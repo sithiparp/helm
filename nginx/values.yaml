@@ -2,7 +2,7 @@ nginx:
   namespace: default
   image: nginx:1.25.0
   replicas: 1
-  host: nginx.arpo.website
+  host: nginx-test.arpo.website
   ingress:
     ingressClassName: nginx
   service:
