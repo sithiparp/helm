@@ -2,19 +2,19 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-ingress
-  namespace: default
+  namespace: {{ .Values.nginx.namespace }}
   labels:
     app.kubernetes.io/name: {{ .Release.Name }}
 spec:
   ingressClassName: {{ .Release.Name }}
   rules:
-  - host: "nginx.arpo.website"
+  - host: {{ .Values.nginx.host }}
     http:
       paths:
       - pathType: Prefix
         path: /
         backend:
           service:
-            name: nginx-service
+            name: {{ .Release.Name }}-service
             port:
               number: 80
