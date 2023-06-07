@@ -1,7 +1,7 @@
 nginx:
   namespace: default
   image: nginx:1.25.0
-  replicas: 1
+  replicas: 2
   host: nginx.arpo.website
   service:
     type: ClusterIP
