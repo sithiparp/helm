@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: nginx
 spec:
-  type: ClusterIP
+  # type: ClusterIP
   selector:
     app.kubernetes.io/name: nginx
   ports:
