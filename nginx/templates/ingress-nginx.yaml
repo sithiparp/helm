@@ -2,13 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.nginx.namespace }}
   labels:
     app.kubernetes.io/name: {{ .Release.Name }}
 spec:
-  ingressClassName: {{ .Values.ingress.ingressClassName }}
+  ingressClassName: {{ .Values.nginx.ingress.ingressClassName }}
   rules:
-  - host: {{ .Values.host }}
+  - host: {{ .Values.nginx.host }}
     http:
       paths:
       - pathType: Prefix
