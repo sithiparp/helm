@@ -8,8 +8,7 @@ metadata:
 spec:
   # type: ClusterIP
   selector:
-    # app.kubernetes.io/name: nginx
-    app: nginx
+    app.kubernetes.io/name: nginx
   ports:
     - protocol: TCP
       port: 80
